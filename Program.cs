@@ -4,9 +4,8 @@ namespace C_
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            int[,] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
+        static void ArrayChanger(int[,] arr)
+        { 
             int[] sub_arr_up = new int[arr.GetLength(1)];
             int[] sub_arr_down = new int[arr.GetLength(1)];
             for(int i = 0; i < arr.GetLength(0); i++)
@@ -38,6 +37,28 @@ namespace C_
                     }
                 }
             }
+        }
+
+        static void PrintArr(int[,] arr)
+        {
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                Console.Write('[');
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    Console.Write(arr[i,j]+" ");
+                }
+                Console.Write(']');
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
+        static void Main(string[] args)
+        {
+            int[,] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+            PrintArr(arr);
+            ArrayChanger(arr);
+            PrintArr(arr);
         }
     }
 }
