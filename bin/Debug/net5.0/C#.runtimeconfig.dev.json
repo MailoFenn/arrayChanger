@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/mailofenn/.dotnet/store/|arch|/|tfm|",
+      "/home/mailofenn/.nuget/packages"
+    ]
+  }
+}
